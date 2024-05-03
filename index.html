@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./slike/favicon.ico">
+    <title>Triba</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/triba.css">
+</head>
+<body>
+    <header>
+        <section class="col-1">
+            <h1>Welcome to <span>Triba</span>!</h1>
+            <p>Experience the <span>thrilling</span> two-player game of <span>triangles</span>.</p>
+        </section>
+        <section class="col-2">
+            <img src="./slike/triangles.png" alt="trouglovi">
+        </section>
+
+    </header>
+    <main>
+        <section>
+            <menu>
+                <li id="item1" class="items active-item" onclick="changeState('#item1')">
+                    <i class="fa fa-gamepad"></i><span>Nova igra</span>
+                </li>
+
+                <li id="item2" class="items" onclick="changeState('#item2')">
+                    <i class="fa fa-book"></i><span>Upute</span>
+                </li>
+                <li id="item3" class="items" onclick="changeState('#item3')">
+                    <i class="fa fa-info-circle"></i><span>O projektu</span>
+                </li>
+            </menu>
+        </section>
+        <div class="content active-content">
+            <div id="izbor">
+            <h3>Izbornik</h3>
+            <h5>Standardne ploče</h5>
+            <input type="radio" name="board" id="1" value="1"><label for="1">10 x 8</label>
+            <input type="radio" name="board" id="2" value="2"><label for="2">6 x 8</label>
+            <input type="radio" name="board" id="3" value="3"><label for="3">10 x 10</label>
+            <h5>Nestandardni oblik</h5>
+            <input type="radio" name="board" id="4" value="4"><label for="4">Baklava</label>
+            <a href="#poruke" id="start">Započni novu igru</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <p>Triba je igra koja se sastoji od mreže m <span style="color: orange">x</span> n tačaka, ili nekog nestandardnog oblika. Dva igrača igraju naizmjenično. 
+                Svaki igrač u svom potezu bira trougao tako što izabere tri tačke iz mreže koje ne
+                leže na istoj pravoj. Trouglovi se ne smiju sjeći, te ne smiju dva trougla imati zajednički vrh.
+                Trouglovi se mogu nalaziti jedan unutar drugog. Igra je završena kada jedan igrač ostane bez
+                poteza.</p>
+        </div>
+
+        <div class="content" id="oProjektu">
+            <p>Ovaj projekat je rađen u okviru predmeta <span style="color:orange">Web programiranje</span>.</p>
+            <ul>
+                <li>Profesor: Sead Delalić</li>
+                <li>Asistent: Irhad Fejzić</li>
+                <li>Studij: Teorijska kompjuterska nauka</li>
+                <li>Fakultet: Prirodno-matematički fakultet</li>
+                <li>Naziv projekta: Triba</li>
+                <li>Autor:</li>
+                <ul>
+                    <li>Amar Korić</li>
+                        <div id="kontakt">
+                            <li><a href="https://www.linkedin.com/in/amar-kori%C4%87-b4a370239/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/kora02" target="_blank"><i class="fa fa-github"></i></a></li>
+                            <li><a href="mailto:amar.koric02@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                        </div>
+                </ul>
+            </ul>
+        </div>
+    </main>
+    
+    <section id="poruke">
+        <div class="poruka" id="APotez">Igrač <span style="color: orange;">A</span> je na potezu. </div>
+        <div class="poruka" id="BPotez">Igrač <span style="color: blue;">B</span> je na potezu. </div>
+        <div class="poruka" id="APobjeda">Igrač <span style="color: orange;">A</span> je pobijedio! </div>
+        <div class="poruka" id="BPobjeda">Igrač <span style="color: blue;">B</span> je pobijedio! </div>
+        <div class="poruka" id="NedozvoljenPotez"> Nedozvoljen potez! </div>
+        <div class="poruka" id="igrajPonovo">
+            <p> Da li želite igrati ponovo?</p>
+            <button id="restart">Igraj ponovo</button>
+        </div>
+    </section>
+    <canvas id="platno"></canvas>
+
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/canvas.js"></script>
+    <script src="./scripts/logic.js"></script>
+    <script src="./scripts/crtanje.js"></script>
+</body>
+</html>

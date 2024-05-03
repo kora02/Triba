@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, html {
+
+    scroll-behavior: smooth !important;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}

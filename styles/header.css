@@ -1,0 +1,41 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    overflow-x: hidden;
+}
+
+header .col-1 {
+    flex: 1 1 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+header .col-1 h1 {
+    font-size: 50px;
+}
+
+header .col-1 p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+header .col-1 span {
+    color: orange;
+}
+
+
+header .col-2 {
+    flex: 1 1 0px;
+    text-align: center; 
+}
+
+header .col-2 img {
+    max-width: 300px;
+    height: auto;
+}

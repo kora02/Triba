@@ -1,0 +1,71 @@
+#platno {
+    display: block;
+    margin: 0px auto;
+    padding: 0;
+}
+
+
+#poruke {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 80px;
+    
+}
+
+.poruka {
+    display: none;
+    font-size: 2.5vh;
+    font-weight: 700;
+    margin-right: 3px;
+    margin-bottom: 10px;
+}
+
+
+.aktivna-poruka {
+    display: block;
+}
+
+#igrajPonovo p {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.kraj-igre {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+
+}
+
+
+
+#igrajPonovo button {
+    border-radius: 20px;
+    padding: 6px;
+    background-color: whitesmoke;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    margin-top: 7px;
+
+
+}
+
+#igrajPonovo button:hover {
+    transition: 0.2s ease-in;
+    background-color: gray;
+}
+
+#NedozvoljenPotez {
+    color: red;
+    font-weight: 100;
+    font-style: italic;
+}
